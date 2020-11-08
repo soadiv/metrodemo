@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Display from './Display';
+import ImageViewer from './ImageViewer';
+
 
 const MENU = [
   { name: "Человек на пути", url: "https://www.youtube.com/embed/xzyvgdpGbjI", description:"Вследствие возникновения данного инцидента поезд №44, с временем отправления 7 час. 42 мин. был отправлен со станции Киевская в 7 час. 52 мин. Остановка движения поездов из-за инцидента составляет 10 мин. Время на полное восстановление интервалов движения в нечетном направлении: 153 мин. Время на полное восстановление интервалов в чётном направлении: 182 мин." },
@@ -12,6 +14,7 @@ const MENU = [
 
 ];
 
+
 class App extends React.Component {
   constructor() {
     super();
@@ -19,8 +22,10 @@ class App extends React.Component {
       activeItem: 0,
     };
   }
+  
   render(){
     const activeItem = this.state.activeItem;
+    
   return (
     <div className="App">
       {MENU.map((item, index) => (
@@ -34,6 +39,7 @@ class App extends React.Component {
       </button>
     ))}
       <Display name={MENU[activeItem].name} url={MENU[activeItem].url} description={MENU[activeItem].description}></Display>
+      <ImageViewer></ImageViewer>
     </div>
   );
 }
