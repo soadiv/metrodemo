@@ -6,6 +6,8 @@ function Display(props) {
         frameBorder='0'
         allow='autoplay; encrypted-media'
         allowFullScreen
+        width='540'
+        height='400'
         title='video'/>
         <div>{props.description}</div>
         </div>

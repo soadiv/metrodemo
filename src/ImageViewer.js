@@ -1,20 +1,35 @@
 import * as React from 'react';
 import Viewer from 'react-viewer';
 
-function ImageViewer() {
-  const [ visible, setVisible ] = React.useState(false);
 
+class ImageViewer extends React.Component{
+  constructor(props) {
+    super();
+
+    this.state = {
+      visible: false,
+      loading: false
+    };
+  }
+  componentDidMount() {
+    this.setState({
+      loading: true
+    });
+    
+  }
+  render(){
   return (
     <div>
-      <button onClick={() => { setVisible(true); } }>show</button>
-      <Viewer
-      visible={visible}
-      container={document.getElementById("img")}
-      onClose={() => { setVisible(false); } }
-      images={[{src: '/Image/SpeedLimit.jpg', alt: ''}]}
-      />
       <div id='img'></div>
+      
+      <Viewer
+      visible={true}
+      container={document.getElementById("img")}
+      noClose
+      images={[{src: this.props.src, alt: ''}]}
+      />
+      
     </div>
-  );
+  );}
 }
 export default ImageViewer;
