@@ -1,16 +1,77 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-navButtons {  
+  width: 20vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-navButtons-menu{
+  height: 20px;
+  width: 30px;
+  padding: 10px;
+}
+
+.App-navButtons-menu:hover {
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  border-bottom: 4px solid black;
+  margin-bottom: 4px;
+}
+
+.App-navButtons-close{
+  text-align: right;
+  width: 20vw;  
+}
+
+.App-navButtons-close-btn{
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.App-navButtons-close-btn:hover{
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);  
+}
+
+.App-navButtons-btns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.App-navButtons-button{
+  font-size: calc(10px + 1vmin);
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.App-navButtons-button:hover {
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+  width: 20vw;
+}
+
+.App-result{  
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  background-color: rgb(240, 240, 240);
+}
+
+.App-result-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .Appheader {
@@ -20,17 +81,4 @@
     justify-content: center;
     background: #fff;
     border-bottom: 1px solid #c92622;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
