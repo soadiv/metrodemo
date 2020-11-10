@@ -1,17 +1,39 @@
-.App {
-  text-align: center;
+.App {  
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  height: 100vh;
+}
+
+.logoImg:hover{
+  cursor: pointer;
+}
+
+.Appheader {
+  width: 100%;
+  height: 40px;
+  display: flex;    
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #c92622;
+}
+
+.Appbody {
   display: flex;
   flex-direction: row;
 }
 
 .App-navButtons {  
   width: 20vw;
+  padding: 10px;
+  background: #fff;
+  height: calc(100vh - 61px);  
 }
 
 .App-navButtons-menu{
   height: 20px;
-  width: 30px;
-  padding: 10px;
+  width: 25px;
+  padding: 10px 20px;
 }
 
 .App-navButtons-menu:hover {
@@ -20,65 +42,68 @@
 
 .bar {
   display: block;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #ccc;
   margin-bottom: 4px;
+  border-radius: 10px;
 }
 
 .App-navButtons-close{
-  text-align: right;
-  width: 20vw;  
+  text-align: right; 
+  margin-bottom: 100px;
 }
 
 .App-navButtons-close-btn{
   padding: 0 10px;
   font-weight: 500;
   font-size: 30px;
+  color: rgb(78, 78, 78)
 }
 
 .App-navButtons-close-btn:hover{
   cursor: pointer;
-  background-color: rgb(243, 243, 243);  
 }
 
 .App-navButtons-btns{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
 }
 
 .App-navButtons-button{
   font-size: calc(10px + 1vmin);
-  padding: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
   margin: 5px 0;
+  width: 20vw;
 }
 
-.App-navButtons-button:hover {
+.App-navButtons-span{
+  border-left: 2px solid #fff;
+  padding-left: 10px;
+}
+
+.App-navButtons-span-active{
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.App-navButtons-button:hover .App-navButtons-span{
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.App-navButtons-button:hover {  
   cursor: pointer;
-  background-color: rgb(243, 243, 243);
   width: 20vw;
 }
 
 .App-result{  
+  justify-content: center;  
+  text-align: center;
   width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  background-color: rgb(240, 240, 240);
+  height: 100%;
 }
 
 .App-result-content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-}
-
-.Appheader {
-  width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    background: #fff;
-    border-bottom: 1px solid #c92622;
 }
