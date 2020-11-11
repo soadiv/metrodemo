@@ -111,3 +111,8 @@
 .ListItem{
   text-align: left;
 }
+
+.alink{
+  text-align: left;
+  padding-left: 20px;
+}

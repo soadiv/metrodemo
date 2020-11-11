@@ -10,6 +10,22 @@ function Display(props) {
         width='540'
         height='400'
         title='video'/>
+        <div className="alink">
+        <a
+            href={props.day}
+            target="_blank"
+          >
+              Суточный план-график
+          </a> 
+        </div>
+        <div className="alink">
+        <a
+            href={props.graphik}
+            target="_blank"
+          >
+              График исполненного движения
+          </a> 
+        </div>
         <div>
             <ul>{ar.map((item, index) => (
             <li className="ListItem">
