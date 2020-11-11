@@ -26,6 +26,11 @@ class ImageViewer extends React.Component{
       visible={true}
       container={document.getElementById("img")}
       noClose
+      noNavbar
+      noToolbar
+      zoomSpeed={0.3}
+      rotatable={false}
+      minScale={0.5}
       images={[{src: this.props.src, alt: ''}]}
       />
       
