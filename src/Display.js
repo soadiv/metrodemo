@@ -1,4 +1,5 @@
 function Display(props) {
+    var ar = props.description.split('&')
     return (
         <div>
         <h1>Моделирование ННР: {props.name}</h1>
@@ -9,7 +10,12 @@ function Display(props) {
         width='540'
         height='400'
         title='video'/>
-        <div>{props.description}</div>
+        <div>
+            <ul>{ar.map((item, index) => (
+            <li className="ListItem">
+                {item}
+            </li>
+        ))}</ul></div>
         </div>
     );
   }

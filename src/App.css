@@ -107,3 +107,7 @@
   display: flex;
   flex-direction: column;
 }
+
+.ListItem{
+  text-align: left;
+}
