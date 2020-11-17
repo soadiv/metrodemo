@@ -5,16 +5,99 @@ import ImageViewer from './ImageViewer';
 import a from './a.png';
 
 const MENU = [
-  { type: 2, name: "Схема Филёвской линии", src: '/Image/FilLine.png' },
-  { type: 1, name: "Человек на пути", url: "https://www.youtube.com/embed/xzyvgdpGbjI", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления 7 час. 42 мин. был отправлен со станции Киевская в 7 час. 52 мин.&Остановка движения поездов из-за инцидента составляет 10 мин.&Время на полное восстановление интервалов движения в нечетном направлении: 153 мин.&Время на полное восстановление интервалов в чётном направлении: 182 мин.", day:"/Image/гирчеловекнапути1.svg", graphik:"/Image/человекнапути2.svg" },
-  { type: 1, name: "Потеря управления", url: "https://www.youtube.com/embed/SA-sZV9DF8c", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления со станции Смоленская 7 час. 44 мин. был отправлен в 8 час. 04 мин.&Остановка движения поездов из-за инцидента составляет 16 мин.&Время на полное восстановление интервалов движения в нечетном направлении: 180 мин.&Время на полное восстановление интервалов в чётном направлении: 195 мин.", graphik:"/Image/потеряуправления.svg" },
-  { type: 1, name: "Заклинивание колесных пар", url: "https://www.youtube.com/embed/8EDOj3qeFgo", description: "Вследствие возникновения данного инцидента поезд №45, с временем отправления 7 час. 58 мин. был отправлен со станции Студенческая в 8 час. 09 мин.&Остановка движения поездов из-за инцидента составляет 11 мин. Далее неисправный поезд следует с уменьшенной скоростью в депо на протяжении 30 мин.&Время на полное восстановление интервалов движения в нечетном направлении: 137 мин.&Время на полное восстановление интервалов в чётном направлении: 162 мин.", day:"/Image/ГИРзаклиниваниеколпар.svg", graphik:"/Image/заклиниваниеколпар.svg" },
-  { type: 1, name: "Проезд запрещающего", url: "https://www.youtube.com/embed/T6ULuuq6InI", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления 7 час. 46 мин. был отправлен в 7 час. 53 мин.&Остановка движения поездов из-за инцидента составляет 7 мин.&Время на полное восстановление интервалов движения в нечетном направлении: 146 мин.&Время на полное восстановление интервалов в чётном направлении: 148 мин.", day:"/Image/ГИРпроездзапрещ.svg.svg", graphik:"/Image/проездзапрещ.svg" },
-  { type: 1, name: "Ложная занятость", url: "https://www.youtube.com/embed/kX4A8u8NeuU", description: "Продолжительность ложной занятости: 1 час.&С уменьшенной скоростью, под запрещающее показание светофора КИ-701 со станции Киевская отправились поезда №№ 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67.&Время на полное восстановление интервалов движения в нечетном направлении: 195 мин.&Время на полное восстановление интервалов в чётном направлении: 162 мин.", day:"/Image/ГИРложнаязанятость.svg", graphik:"/Image/ложнаязанятость.svg" },
-  { type: 1, name: "Плюс одна пара поездов", url: "https://www.youtube.com/embed/8OuTpTrD-x8", description: "В час-пик добавлена 1 пара поездов по маршруту Кунцевская – Александровский сад.&При увеличении размеров движения возникают задержки в движении поездов из-за недостаточной пропускной способности ст. Кунцевская.&Увеличивается время стоянки на ст. Пионерская. По перегону ст. Пионерская – ст. Кунцевская поезда следуют с задержками.", day:"/Image/ГИРпара.svg", graphik:"/Image/парапоездов.svg" },
+  { type: 1, name: "Человек на пути", url: "https://www.youtube.com/embed/xzyvgdpGbjI", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления 7 час. 42 мин. был отправлен со станции Киевская в 7 час. 52 мин. Остановка движения поездов из-за инцидента составляет 10 мин. Время на полное восстановление интервалов движения в нечетном направлении: 153 мин. Время на полное восстановление интервалов в чётном направлении: 182 мин." },
+  { type: 1, name: "Потеря управления", url: "https://www.youtube.com/embed/SA-sZV9DF8c", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления со станции Смоленская 7 час. 44 мин. был отправлен в 8 час. 04 мин. Остановка движения поездов из-за инцидента составляет 16 мин. Время на полное восстановление интервалов движения в нечетном направлении: 180 мин. Время на полное восстановление интервалов в чётном направлении: 195 мин." },
+  { type: 1, name: "Заклинивание колесных пар", url: "https://www.youtube.com/embed/8EDOj3qeFgo", description: "Вследствие возникновения данного инцидента поезд №45, с временем отправления 7 час. 58 мин. был отправлен со станции Студенческая в 8 час. 09 мин. Остановка движения поездов из-за инцидента составляет 11 мин. Далее неисправный поезд следует с уменьшенной скоростью в депо на протяжении 30 мин. Время на полное восстановление интервалов движения в нечетном направлении: 137 мин. Время на полное восстановление интервалов в чётном направлении: 162 мин." },
+  { type: 1, name: "Проезд запрещающего", url: "https://www.youtube.com/embed/T6ULuuq6InI", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления 7 час. 46 мин. был отправлен в 7 час. 53 мин. Остановка движения поездов из-за инцидента составляет 7 мин. Время на полное восстановление интервалов движения в нечетном направлении: 146 мин. Время на полное восстановление интервалов в чётном направлении: 148 мин." },
+  { type: 1, name: "Ложная занятость", url: "https://www.youtube.com/embed/kX4A8u8NeuU", description: "Продолжительность ложной занятости: 1 час. С уменьшенной скоростью, под запрещающее показание светофора КИ-701 со станции Киевская отправились поезда №№ 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67. Время на полное восстановление интервалов движения в нечетном направлении: 195 мин. Время на полное восстановление интервалов в чётном направлении: 162 мин." },
+  { type: 1, name: "Плюс одна пара поездов", url: "https://www.youtube.com/embed/8OuTpTrD-x8", description: "В час-пик добавлена 1 пара поездов по маршруту Кунцевская – Александровский сад. При увеличении размеров движения возникают задержки в движении поездов из-за недостаточной пропускной способности ст. Кунцевская. Увеличивается время стоянки на ст. Пионерская. По перегону ст. Пионерская – ст. Кунцевская поезда следуют с задержками." },
   { type: 2, name: "Скоростные ограничения", src: '/Image/SpeedLimit.jpg' },
   { type: 2, name: "Лимитирующие участки", src: '/Image/LimitItem.png' },
   { type: 2, name: "Расстановка составов", src: '/Image/расстановка.png' }
+];
+
+const NEWMENUJSON = [
+  {"item" : { 
+    "id":"1",
+    "type": "2", 
+    "name": "Схема Филёвской линии",
+    "src": "/Image/FilLine.png" 
+    
+  }},
+  {"group" :{
+    "name" : "Без задержек",
+    "items":[
+    {"item" : { 
+    "id":"2",
+    "type": "1", 
+    "name": "Существующая система ИР",
+    "src": "/Image/FilLine.png",
+    "url": "https://www.youtube.com",
+    "description": "Вследствие возникновения "
+    
+  }},
+  {"item" : {
+    "id":"3", 
+    "type": "1", 
+    "name": "АЛС-АРС",
+    "src": "/Image/FilLine.png",
+    "url": "https://www.youtube.com",
+    "description": "Вследствие возникновения "
+    
+  }},
+  {"item" : {
+    "id":"4", 
+    "type": "1", 
+    "name": "Радиоканал",
+    "src": "/Image/FilLine.png",
+    "url": "https://www.youtube.com",
+    "description": "Вследствие возникновения "
+    
+  }}
+  
+    ]
+  }},
+  {"group" :{
+    "name" : "Человек на пути",
+    "items":[
+    {"item" : {
+    "id":"5", 
+    "type": "1", 
+    "name": "Существующая система ИР",
+    "src": "/Image/FilLine.png",
+    "url": "https://www.youtube.com",
+    "description": "Вследствие возникновения ",
+    "day":"/Image/гирчеловекнапути1.svg",
+    "graphik":"/Image/человекнапути2.svg"
+    
+  }},
+  {"item" : {
+    "id":"6", 
+    "type": "1", 
+    "name": "АЛС-АРС",
+    "src": "/Image/FilLine.png",
+    "url": "https://www.youtube.com",
+    "description": "Вследствие возникновения "
+    
+  }},
+  {"item" : {
+    "id":"7", 
+    "type": "1", 
+    "name": "Радиоканал",
+    "src": "/Image/FilLine.png",
+    "url": "https://www.youtube.com",
+    "description": "Вследствие возникновения "
+    
+  }}
+    ]
+  }},
+  {"item" : {
+    "id":"8", 
+    "type": "2", 
+    "name": "Схема Филёвской линии5",
+    "src": "/Image/FilLine.png" 
+    
+  }}
 ];
 
 class App extends React.Component {
@@ -22,7 +105,8 @@ class App extends React.Component {
     super();
     this.state = {
       activeItem: 0,
-      menu: false
+      menu: false,
+      clickkedGroup: "",
     };
   }
 
@@ -75,28 +159,97 @@ class App extends React.Component {
             </span>
             </div>
             <div className="App-navButtons-btns">
-              {MENU.map((item, index) => (
+              {NEWMENUJSON.map((item, index) => (
+                item.item !== undefined
+                  ? <div
+                    className="App-navButtons-button"
+                    key={item.item.id}
+                    onClick={() => {
+                      this.setState({ activeItem: item.item.id, clickkedGroup: "" });
+                    }}
+                  >
+                    <span
+                      className={activeItem === item.item.id
+                        ? "App-navButtons-span-active"
+                        : "App-navButtons-span"
+                      }
+                    >
+                      {item.item.name}
+                    </span>
+                  </div>
+                  : <div key={item.group.name}>
+                    <div
+                      className="App-navButtons-button"                     
+                      onClick={() => this.state.clickkedGroup === ""
+                        ? this.setState({clickkedGroup: item.group.name})
+                        : this.state.clickkedGroup === item.group.name
+                          ? this.setState({clickkedGroup: ""})
+                          : this.setState({clickkedGroup: item.group.name})
+                      }
+                    >
+                      <span                        
+                        style={{
+                          borderLeft: '2px solid #fff',
+                          paddingLeft: '10px',
+                          fontWeight: this.state.clickkedGroup === item.group.name 
+                            ? '500'
+                            : ''
+                        }}
+                      > 
+                        {item.group.name}
+                      </span>
+                      <div className={this.state.clickkedGroup === item.group.name 
+                        ? "Triangle-active" 
+                        : "Triangle-passive"
+                        }/>                      
+                    </div>
+                    {this.state.clickkedGroup === item.group.name 
+                      ? item.group.items.map((groupElement, index)=>
+                        <div
+                          className="App-navButtons-button"
+                          key={groupElement.item.id}
+                            onClick={() => {
+                            this.setState({ activeItem: groupElement.item.id });
+                        }}
+                      >
+                        <span
+                          className={activeItem === groupElement.item.id
+                            ? "App-navButtons-span-active"
+                            : "App-navButtons-span"
+                          }
+                        >
+                          {groupElement.item.name}
+                        </span>
+                      </div>
+                        )
+                      : ""
+                    } 
+                    </div>
+              ))}
+              {/* {MENU.map((item, index) => (
                 <div
                   className="App-navButtons-button"
                   key={index}
                   onClick={() => {
                     this.setState({ activeItem: index });
-                  }}                  
+                  }}
                 >
                   <span
-                    className={this.state.activeItem === index ? "App-navButtons-span-active" : "App-navButtons-span"}
+                    className={this.state.activeItem === index
+                      ? "App-navButtons-span-active"
+                      : "App-navButtons-span"
+                    }
                   >
                     {item.name}
                   </span>
                 </div>
-              ))}
-            </div>            
+              ))} */}
+            </div>
           </div>
           <div className="App-result">
-
             <div className="App-result-content">
               {(MENU[activeItem].type === 1) &&
-                <Display name={MENU[activeItem].name} url={MENU[activeItem].url} day={MENU[activeItem].day} graphik={MENU[activeItem].graphik} description={MENU[activeItem].description}></Display>
+                <Display name={MENU[activeItem].name} url={MENU[activeItem].url} description={MENU[activeItem].description}></Display>
               }
               {(MENU[activeItem].type === 2) &&
                 <ImageViewer src={MENU[activeItem].src}></ImageViewer>

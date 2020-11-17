@@ -74,6 +74,9 @@
   padding-left: 10px;
   margin: 5px 0;
   width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .App-navButtons-span{
@@ -82,12 +85,12 @@
 }
 
 .App-navButtons-span-active{
-  border-left: 2px solid red;
+  border-left: 2px solid #c92622;
   padding-left: 10px;
 }
 
 .App-navButtons-button:hover .App-navButtons-span{
-  border-left: 2px solid red;
+  border-left: 2px solid #c92622;
   padding-left: 10px;
 }
 
@@ -108,11 +111,16 @@
   flex-direction: column;
 }
 
-.ListItem{
-  text-align: left;
+.Triangle-active{
+  width: 0px;
+  border: 10px solid transparent;   
+  border-bottom: 10px solid #c92622;
+  margin-right: 10px;
 }
 
-.alink{
-  text-align: left;
-  padding-left: 20px;
+.Triangle-passive{
+  width: 0px;
+  border: 10px solid transparent;
+  border-top: 10px solid #c92622;
+  margin-right: 10px;
 }
