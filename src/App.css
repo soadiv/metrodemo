@@ -79,12 +79,33 @@
   justify-content: space-between;
 }
 
+.App-navButtons-button-gr{
+  font-size: calc(10px + 1vmin);
+  margin-bottom: 20px;
+  padding-left: 40px;
+  margin: 5px 0;
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .App-navButtons-span{
   border-left: 2px solid #fff;
   padding-left: 10px;
 }
 
 .App-navButtons-span-active{
+  border-left: 2px solid #c92622;
+  padding-left: 10px;
+}
+
+.App-navButtons-span-gr{
+  border-left: 2px solid #fff;
+  padding-left: 10px;
+}
+
+.App-navButtons-span-active-gr{
   border-left: 2px solid #c92622;
   padding-left: 10px;
 }
@@ -97,6 +118,15 @@
 .App-navButtons-button:hover {  
   cursor: pointer;
   width: 20vw;
+}
+
+.App-navButtons-button-gr:hover .App-navButtons-span-gr{
+  border-left: 2px solid #c92622;
+  padding-left: 10px;
+}
+
+.App-navButtons-button-gr:hover{
+  cursor: pointer;
 }
 
 .App-result{  

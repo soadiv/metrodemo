@@ -5,7 +5,7 @@ import ImageViewer from './ImageViewer';
 import a from './a.png';
 
 const MENU = [
-  { type: 2, name: "Схема Филёвской линии", src: '/Image/FilLine.png' },
+  { type: 2, name: "Схема Филёвской линии", src: '/metrodemo/Image/FilLine.png' },
   { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/xzyvgdpGbjI", description: "", day:"", graphik:"" },
   { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/xzyvgdpGbjI", description: "", day:"", graphik:"" },
   { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/xzyvgdpGbjI", description: "", day:"", graphik:"" },
@@ -28,8 +28,8 @@ const MENU = [
   { type: 1, name: "Плюс одна пара поездов", url: "https://www.youtube.com/embed/8OuTpTrD-x8", description: "В час-пик добавлена 1 пара поездов по маршруту Кунцевская – Александровский сад.&При увеличении размеров движения возникают задержки в движении поездов из-за недостаточной пропускной способности ст. Кунцевская.&Увеличивается время стоянки на ст. Пионерская. По перегону ст. Пионерская – ст. Кунцевская поезда следуют с задержками.", day:"/Image/ГИРпара.svg", graphik:"/Image/парапоездов.svg" },
   { type: 1, name: "Плюс одна пара поездов", url: "https://www.youtube.com/embed/8OuTpTrD-x8", description: "В час-пик добавлена 1 пара поездов по маршруту Кунцевская – Александровский сад.&При увеличении размеров движения возникают задержки в движении поездов из-за недостаточной пропускной способности ст. Кунцевская.&Увеличивается время стоянки на ст. Пионерская. По перегону ст. Пионерская – ст. Кунцевская поезда следуют с задержками.", day:"/Image/ГИРпара.svg", graphik:"/Image/парапоездов.svg" },
   { type: 2, name: "Скоростные ограничения", src: '/Image/SpeedLimit.jpg' },
-  { type: 2, name: "Лимитирующие участки", src: '/Image/LimitItem.png' },
-  { type: 2, name: "Расстановка составов", src: '/Image/расстановка.png' }
+  { type: 2, name: "Лимитирующие участки", src: '/metrodemo/Image/LimitItem.png' },
+  { type: 2, name: "Расстановка составов", src: '/metrodemo/Image/расстановка.png' }
 ];
 
 const NEWMENUJSON = [
@@ -302,7 +302,7 @@ class App extends React.Component {
                     {this.state.clickkedGroup === item.group.name 
                       ? item.group.items.map((groupElement, index)=>
                         <div
-                          className="App-navButtons-button"
+                          className="App-navButtons-button-gr"
                           key={groupElement.item.id}
                             onClick={() => {
                             this.setState({ activeItem: groupElement.item.id });
@@ -310,8 +310,8 @@ class App extends React.Component {
                       >
                         <span
                           className={activeItem === groupElement.item.id
-                            ? "App-navButtons-span-active"
-                            : "App-navButtons-span"
+                            ? "App-navButtons-span-active-gr"
+                            : "App-navButtons-span-gr"
                           }
                         >
                           {groupElement.item.name}
