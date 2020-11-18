@@ -6,7 +6,7 @@ import a from './a.png';
 
 const MENU = [
   { type: 2, name: "Схема Филёвской линии", src: '/metrodemo/Image/FilLine.png' },
-  { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/xtOPF_wufH8Y", description: "", day:"", graphik:"" },
+  { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/tOPF_wufH8Y", description: "", day:"", graphik:"" },
   { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/vCSCWbCCBus", description: "", day:"", graphik:"" },
   { type: 1, name: "Без задержек", url: "https://www.youtube.com/embed/tnjjjonu23M", description: "", day:"", graphik:"" },
   { type: 1, name: "Человек на пути", url: "https://www.youtube.com/embed/NmMEfqkSs4g", description: "Вследствие возникновения данного инцидента поезд №44, с временем отправления 7 час. 42 мин. был отправлен со станции Киевская в 7 час. 52 мин.&Остановка движения поездов из-за инцидента составляет 10 мин.&Время на полное восстановление интервалов движения в нечетном направлении: 153 мин.&Время на полное восстановление интервалов в чётном направлении: 182 мин.", day:"/metrodemo/Image/гирчеловекнапути1.svg", graphik:"/metrodemo/Image/человекнапути2.svg" },
@@ -140,7 +140,7 @@ const NEWMENUJSON = [
     ]
   }},
   {"group" :{
-    "name" : "ложная занятость",
+    "name" : "Ложная занятость",
     "items":[
     {"item" : {
     "id":"16", 
