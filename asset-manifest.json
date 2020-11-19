@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/metrodemo/static/css/main.00e1f14f.chunk.css",
-    "main.js": "/metrodemo/static/js/main.0eb96a38.chunk.js",
-    "main.js.map": "/metrodemo/static/js/main.0eb96a38.chunk.js.map",
+    "main.css": "/metrodemo/static/css/main.38f7e65e.chunk.css",
+    "main.js": "/metrodemo/static/js/main.5bbc50c6.chunk.js",
+    "main.js.map": "/metrodemo/static/js/main.5bbc50c6.chunk.js.map",
     "runtime-main.js": "/metrodemo/static/js/runtime-main.b75c123b.js",
     "runtime-main.js.map": "/metrodemo/static/js/runtime-main.b75c123b.js.map",
     "static/js/2.630257e0.chunk.js": "/metrodemo/static/js/2.630257e0.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.43d6d94c.chunk.js": "/metrodemo/static/js/3.43d6d94c.chunk.js",
     "static/js/3.43d6d94c.chunk.js.map": "/metrodemo/static/js/3.43d6d94c.chunk.js.map",
     "index.html": "/metrodemo/index.html",
-    "static/css/main.00e1f14f.chunk.css.map": "/metrodemo/static/css/main.00e1f14f.chunk.css.map",
+    "static/css/main.38f7e65e.chunk.css.map": "/metrodemo/static/css/main.38f7e65e.chunk.css.map",
     "static/js/2.630257e0.chunk.js.LICENSE.txt": "/metrodemo/static/js/2.630257e0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b75c123b.js",
     "static/js/2.630257e0.chunk.js",
-    "static/css/main.00e1f14f.chunk.css",
-    "static/js/main.0eb96a38.chunk.js"
+    "static/css/main.38f7e65e.chunk.css",
+    "static/js/main.5bbc50c6.chunk.js"
   ]
 }
