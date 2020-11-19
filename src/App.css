@@ -1,8 +1,8 @@
 .App {  
   display: flex;
   flex-direction: column;
-  background-color: #ccc;
   height: 100vh;
+  overflow: hidden;
 }
 
 .logoImg:hover{
@@ -16,18 +16,26 @@
   align-items: center;
   background: #fff;
   border-bottom: 1px solid #c92622;
+  z-index: 3000;
 }
 
 .Appbody {
   display: flex;
-  flex-direction: row;
+  height: 100%;
 }
 
 .App-navButtons {  
-  width: 20vw;
-  padding: 10px;
+  height: 100%;
+  max-width: 350px;
+  flex-basis: 100%;
+  padding: 50px 20px 0;
   background: #fff;
-  height: calc(100vh - 61px);  
+  box-shadow: 0 0 15px #e4e4e4;
+  z-index: 2000;
+  overflow: auto;
+  min-width: 280px;
+  position: relative;
+  flex-direction: column;
 }
 
 .App-navButtons-menu{
@@ -49,7 +57,9 @@
 
 .App-navButtons-close{
   text-align: right; 
-  margin-bottom: 100px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .App-navButtons-close-btn{
@@ -73,10 +83,10 @@
   margin-bottom: 20px;
   padding-left: 10px;
   margin: 5px 0;
-  width: 20vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .App-navButtons-button-gr{
@@ -84,7 +94,6 @@
   margin-bottom: 20px;
   padding-left: 40px;
   margin: 5px 0;
-  width: 20vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -117,7 +126,6 @@
 
 .App-navButtons-button:hover {  
   cursor: pointer;
-  width: 20vw;
 }
 
 .App-navButtons-button-gr:hover .App-navButtons-span-gr{
@@ -132,34 +140,55 @@
 .App-result{  
   justify-content: center;  
   text-align: center;
-  width: 100vw;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
 }
 
 .App-result-content{
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.App-result-content__video {
+  max-width: 100%;
+}
+
+.App-result-content__content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  align-items: center;
 }
 
 .Triangle-active{
   width: 0px;
   border: 10px solid transparent;   
   border-bottom: 10px solid #c92622;
-  margin-right: 10px;
 }
 
 .Triangle-passive{
   width: 0px;
   border: 10px solid transparent;
   border-top: 10px solid #c92622;
-  margin-right: 10px;
+  transform: translate(0, 50%);
 }
 
 .alink{
   text-align: left;
   padding-left: 20px;
+  width: 100%;
 }
 
 .ListItem{
   text-align: left;
+}
+
+.react-viewer-mask {
+  background-color: #fff !important;
 }

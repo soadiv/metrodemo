@@ -237,13 +237,13 @@ class App extends React.Component {
               marginLeft: 20
             }}
           >
-            «Интерактивная модель Филёвской линии Московского метро»
+            Интерактивная модель Филёвской линии Московского метро
           </span>
         </div>
         <div className="Appbody">
           <div className="App-navButtons"
             style={{
-              display: this.state.menu ? 'block' : 'none'
+              display: this.state.menu ? 'flex' : 'none'
             }}
           >
             <div className="App-navButtons-close">

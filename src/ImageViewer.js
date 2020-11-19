@@ -31,6 +31,7 @@ class ImageViewer extends React.Component{
       zoomSpeed={0.3}
       rotatable={false}
       minScale={0.5}
+      defaultScale={3}
       images={[{src: this.props.src, alt: ''}]}
       />
       

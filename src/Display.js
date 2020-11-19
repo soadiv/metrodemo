@@ -1,7 +1,7 @@
 function Display(props) {
     var ar = props.description.split('&')
     return (
-        <div>
+        <div class="App-result-content__content">
         <h1>Моделирование ННР: {props.name}</h1>
         <iframe src={props.url}
         frameBorder='0'
@@ -9,6 +9,7 @@ function Display(props) {
         allowFullScreen
         width='540'
         height='400'
+        className='App-result-content__video'
         title='video'/>
         <div className="alink">
         <a

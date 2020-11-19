@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Модель Филёвской линии",
+  "name": "Интерактивная модель Филёвской линии Московского метро",
   "icons": [
     {
       "src": "favicon.ico",
