@@ -11,22 +11,26 @@ function Display(props) {
         height='900'
         className='App-result-content__video'
         title='video'/>
+        {(props.day) &&
+            <div className="alink">
+            <a
+                href={props.day}
+                target="_blank"
+            >
+                Суточный план-график
+            </a> 
+            </div>
+        }
+        {(props.graphik) &&
         <div className="alink">
-        <a
-            href={props.day}
-            target="_blank"
-          >
-              Суточный план-график
-          </a> 
-        </div>
-        <div className="alink">
-        <a
-            href={props.graphik}
-            target="_blank"
-          >
-              График исполненного движения
-          </a> 
-        </div>
+            <a
+                href={props.graphik}
+                target="_blank"
+            >
+                График исполненного движения
+            </a> 
+            </div>
+        }
         <div>
             <ul>{ar.map((item, index) => (
             <li className="ListItem">

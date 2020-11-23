@@ -30,7 +30,7 @@ const MENU = [
   { type: 2, name: "Скоростные ограничения", src: '/metrodemo/Image/SpeedLimit.jpg' },
   { type: 2, name: "Лимитирующие участки", src: '/metrodemo/Image/LimitItem.png' },
   { type: 2, name: "Расстановка составов", src: '/metrodemo/Image/расстановка.png' },
-  { type: 1, name: "Переход с радиоканала на АЛС-АРС", url: "https://www.youtube.com/embed/TEtsYpSFUZU", description: "", day: "/metrodemo/Image/Суточные план-графики/1. Текущая система ИР/ГИР без задержек.svg", graphik: "/metrodemo/Image/Графики исполненного движения/1. Текущая система ИР/без задержек.svg" }
+  { type: 1, name: "Переход с радиоканала на АЛС-АРС", url: "https://www.youtube.com/embed/TEtsYpSFUZU", description: "" }
 ];
 
 const NEWMENUJSON = [
