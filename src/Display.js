@@ -31,13 +31,15 @@ function Display(props) {
             </a> 
             </div>
         }
+        {ar[0] != "" &&
         <div>
             <ul>{ar.map((item, index) => (
             <li className="ListItem">
                 {item}
             </li>
-        ))}</ul></div>
+        ))}</ul></div>}
         </div>
+        
     );
   }
   
