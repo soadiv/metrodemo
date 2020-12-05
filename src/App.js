@@ -64,7 +64,7 @@ const NEWMENUJSON = [
   },
   {
     "group": {
-      "name": "Без задержек",
+      "name": "Штатное движение на линии",
       "items": [
         {
           "item": {
@@ -289,7 +289,7 @@ class App extends React.Component {
     super();
     this.state = {
       activeItem: "0",
-      menu: false,
+      menu: true,
       clickkedGroup: "",
     };
   }
