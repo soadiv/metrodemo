@@ -30,7 +30,9 @@ const MENU = [
   { type: 2, name: "Скоростные ограничения", src: '/Image/SpeedLimit.jpg' },
   { type: 2, name: "Лимитирующие участки", src: '/Image/LimitItem.png' },
   { type: 2, name: "Расстановка составов", src: '/Image/расстановка.png' },
-  { type: 1, name: "Переход с радиоканала на АЛС-АРС", url: "https://www.youtube.com/embed/8w1dHSJ82-M", description: "" }
+  { type: 1, name: "Переход с радиоканала на АЛС-АРС", url: "https://www.youtube.com/embed/8w1dHSJ82-M", description: "" },
+  { type: 4, name: "Отчет о результатах", link: "/Отчет_Метро v.1.docx" },
+  { type: 4, name: "Презентация", link: "/для совещания с ММ 20 11 2020_итог.pdf" }
 ];
 
 const NEWMENUJSON = [
@@ -60,6 +62,20 @@ const NEWMENUJSON = [
       "id": "24",
       "type": "2",
       "name": "Расстановка составов"
+    }
+  },
+  {
+    "item": {
+      "id": "26",
+      "type": "4",
+      "name": "Отчет о результатах"
+    }
+  },
+  {
+    "item": {
+      "id": "27",
+      "type": "4",
+      "name": "Презентация"
     }
   },
   {
@@ -362,7 +378,27 @@ class App extends React.Component {
                         {item.item.name}
                       </span>
                     </div>
-                    : item.item.name === "line"
+                    : item.item.type === "4"
+                    ? <div
+                        className="App-navButtons-button"
+                        key={item.item.id}
+                        
+                      >
+                        <span
+                        className={activeItem === item.item.id
+                          ? "App-navButtons-span-active"
+                          : "App-navButtons-span"
+                        }
+                      >
+                        <a
+                            href={MENU[item.item.id].link}
+                            download
+                        >
+                            {item.item.name}
+                        </a> 
+                      </span>
+                    </div>
+                     : item.item.name === "line"
                       ? <div className="App-line"/>
                         :<div
                           className="App-text"
