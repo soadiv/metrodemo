@@ -391,7 +391,7 @@ class App extends React.Component {
                           : "App-navButtons-span"
                         }
                       >
-                        <a
+                        <a className="BlackLink"
                             href={MENU[item.item.id].link}
                             download
                         >
