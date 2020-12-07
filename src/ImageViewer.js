@@ -18,8 +18,10 @@ class ImageViewer extends React.Component{
     
   }
   render(){
+     var ar = this.props.description.split('&');
   return (
     <div>
+      <h1>{this.props.title}</h1>
       <div id='img'></div>
       
       <Viewer
@@ -34,7 +36,13 @@ class ImageViewer extends React.Component{
       defaultScale={3}
       images={[{src: this.props.src, alt: ''}]}
       />
-      
+      {ar[0] !== "" &&
+        <div>
+            <ol>{ar.map((item, index) => (
+            <li className="ListItem">
+                {item}
+            </li>
+        ))}</ol></div>}
     </div>
   );}
 }
